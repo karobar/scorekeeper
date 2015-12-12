@@ -13,5 +13,5 @@ geared only for foosball.
 Install [meteor.js] (https://www.meteor.com/) and install [meteorite] (http://oortcloud.github.io/meteorite/).
 
 ### Run
-    cd scorekeeper
+    cd scorekeeper/app
     mrt
