@@ -33,6 +33,7 @@
           <li class="sidebar-brand"><a id="link-scorekeeper" href="{{pathFor 'home'}}">ScoreKeeper</a></li>
           <li><a id="link-addplayer" href="{{pathFor 'addplayer'}}">Add Player</a></li>
           <li><a id="link-addmatch" href="{{pathFor 'addmatch'}}">Add Match</a></li>
+          <li><a id="link-allmatches" href="{{pathFor 'allmatches'}}">All Matches</a></li>
           <li><a id="link-individualstats" href="{{pathFor 'individualstats'}}">Individual Stats</a></li>
           <li><a id="link-teamstats" href="{{pathFor 'teamstats'}}">Team Stats</a></li>
           <li><a id="link-rules" href="{{pathFor 'rules'}}">Rules</a></li>
@@ -247,6 +248,40 @@
       </table>
     </div>
   </div>
+</template>
+
+
+
+<template name="allmatches">
+  {{> matchList}}
+</template>
+
+<template name="matchList">
+  <hr>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h3 align="center">Recently Added Players</h3>
+      <table class="footable table table-hover table-striped" id="last_10_players_table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th data-type="numeric">Elo Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each players}}
+            <tr>
+              <td>{{name}}</td>
+              <td>{{findPlayerFirstEloRatingFromId _id}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>
+
+<template name="matchEdits">
 </template>
 
 <template name="individualstats">

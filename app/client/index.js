@@ -251,6 +251,9 @@ Template.sidebar.events({
   'click #link-addmatch': function() {
     $('#wrapper').toggleClass('active');
   },
+  'click #link-allmatches': function() {
+    $('#wrapper').toggleClass('active');
+  },
   'click #link-individualstats': function() {
     $('#wrapper').toggleClass('active');
   },

@@ -97,6 +97,7 @@ Router.map(function() {
                                    'players'
                                   ]),
                 new Route('rules', '/rules'),
+                new Route('allmatches', '/allmatches'),
                 // route with name 'notFound' that for example matches
                 // '/non-sense/route/that-matches/nothing' and automatically 
                 // renders template 'notFound'
